@@ -1,0 +1,74 @@
+{
+    "cells": [
+        {
+            "language": "markdown",
+            "source": [
+                "# 1. Values and Data Types\r\nThe four primitive data types\r\n1. Strings\r\n2. Integers (aka whole numbers)\r\n3. Float (aka decimal numbers)\r\n4. True/False (`true`, `false`)"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "markdown",
+            "source": [
+                "# 2. Variables\r\n1. We use `let` to define a variable that can be reassigned to\r\n2. We use `const` to defnie a variable that cannot be reassigned to "
+            ],
+            "outputs": []
+        },
+        {
+            "language": "javascript",
+            "source": [
+                "// Create a new variable in JS\r\nlet isThereLight = true;\r\nisThereLight = false;\r\nconsole.log(isThereLight);"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "typescript",
+            "source": [
+                "// What about `const`\r\n// const variables CANNOT BE REASSIGNED TO\r\nconst xyz = 0.09;\r\nxyz = 0.1\r\nconsole.log(xyz);"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "markdown",
+            "source": [
+                "# Operators: functions represented as symbols\r\n\r\n## Order of Precedence/ Order of Evaluation\r\n1. Variable subsitution\r\n2. `()`\r\n3. Function calls (i.e execute a function)\r\n4. Arthimeteric Operators `**, / * %, + -`\r\n5. Assignment `=`"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "typescript",
+            "source": [
+                "Math.min(3,4) + Math.min(2,1)"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "typescript",
+            "source": [
+                "let b= 10;\r\nlet c= 15;\r\nMath.max(b,c) + Math.min(b,c);  \r\n// => Math.max(10, 15) + Math.min(10, 15) ! Rule 1 goes first"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "markdown",
+            "source": [
+                "# Functions\r\n\r\n1. Name\r\n2. Input (aka parameters)\r\n3. Result (aka return value)\r\n\r\n"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "typescript",
+            "source": [
+                "Math.min(3, 4);  // the `min` function that is inside `Math`\r\n// => parameters: 3, 4\r\n// => return value is 3\r\n\r\n// To use a function means to \r\n// <name of the function>( <input>)"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "markdown",
+            "source": [
+                "# Imperative Programming\r\n* The CPU executes one line of code at a time\r\n* The CPU forgets about all the lines that has been executed\r\n* The CPU only knows what is in the memory"
+            ],
+            "outputs": []
+        }
+    ]
+}
