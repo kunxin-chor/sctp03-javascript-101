@@ -1,0 +1,124 @@
+{
+    "cells": [
+        {
+            "language": "markdown",
+            "source": [
+                "# JavaScript\r\n* Typeless language\r\n* What are the values that JavaScript supports?"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "typescript",
+            "source": [
+                "// integers\r\n42\r\n// float\r\n3.14\r\n// strings -> textual data (meant for human being to read and understand)\r\n\"She sells seashell at the seashore\"\r\n'The quick brown fox jumps over the lazy dog'\r\n// booleans\r\ntrue\r\nfalse\r\n// 4 primitive (\"simple\") data types"
+            ],
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.stdout",
+                            "value": [
+                                "",
+                                ""
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "items": [
+                        {
+                            "mime": "text/plain",
+                            "value": [
+                                "\u001b[33mfalse\u001b[39m"
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "language": "markdown",
+            "source": [
+                "# Displaying the content of variables and storing data into variables\r\n* If a piece of data is not stored in a variable, it is forgotten"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "typescript",
+            "source": [
+                "// define a variable\r\nlet age = 42;  // assign the integer to the age variable\r\nconsole.log(age);\r\n\r\nlet myName = \"Paul\";\r\nconsole.log(myName); // -> console.log is a function.\r\n// A function is a pre-defined instruction that JavaScript understands.\r\n// When a function is always available, it is known as 'library'\r\n\r\nlet pi = 3.14;\r\nlet isRaining = true;\r\n\r\nconsole.log(pi);\r\nconsole.log(isRaining);"
+            ],
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.stdout",
+                            "value": [
+                                "42",
+                                "Paul",
+                                "3.14",
+                                "true",
+                                "",
+                                ""
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "language": "markdown",
+            "source": [
+                "# Operators\r\n* Operators are functions defined as symbols\r\n* `+ - * /` - arthmeteric operators"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "javascript",
+            "source": [
+                "let cost = 0.55;\r\nlet numbers = 30;\r\n// assign total to be cost multipled by numbers\r\nlet total = cost * numbers;\r\nconsole.log(\"total =\", total);"
+            ],
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.stdout",
+                            "value": [
+                                "total = 16.5",
+                                "",
+                                ""
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "language": "markdown",
+            "source": [
+                "* The memory is the source of truth for the variables\r\n* Imperative programming: one line of the code is executed at a time, and the CPU has no refernce to the code in the past, or the future. * All it has references to is the memory"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "javascript",
+            "source": [
+                "let a = 10;\r\nlet b = a;\r\nb = b + 1;\r\nconsole.log(a);"
+            ],
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.stdout",
+                            "value": [
+                                "10",
+                                "",
+                                ""
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
