@@ -8,7 +8,7 @@
             "outputs": []
         },
         {
-            "language": "typescript",
+            "language": "javascript",
             "source": [
                 "// integers\r\n42\r\n// float\r\n3.14\r\n// strings -> textual data (meant for human being to read and understand)\r\n\"She sells seashell at the seashore\"\r\n'The quick brown fox jumps over the lazy dog'\r\n// booleans\r\ntrue\r\nfalse\r\n// 4 primitive (\"simple\") data types"
             ],
@@ -44,7 +44,7 @@
             "outputs": []
         },
         {
-            "language": "typescript",
+            "language": "javascript",
             "source": [
                 "// define a variable\r\nlet age = 42;  // assign the integer to the age variable\r\nconsole.log(age);\r\n\r\nlet myName = \"Paul\";\r\nconsole.log(myName); // -> console.log is a function.\r\n// A function is a pre-defined instruction that JavaScript understands.\r\n// When a function is always available, it is known as 'library'\r\n\r\nlet pi = 3.14;\r\nlet isRaining = true;\r\n\r\nconsole.log(pi);\r\nconsole.log(isRaining);"
             ],
