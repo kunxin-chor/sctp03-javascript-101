@@ -100,6 +100,80 @@
                     ]
                 }
             ]
+        },
+        {
+            "language": "markdown",
+            "source": [
+                "# Rules for naming a variable or function\r\n1. No  spaces are allowed:\r\n   * cannot use `let sum of product = 3`\r\n2. Cannot put digits at the start of the name (but you can have digits anywhere else)\r\n    * Invalid: `3forone`, `2pricy`, `1product`\r\n    * Valid: `priceOf2`, `x1`, `x2`, `y1`, `y2`\r\n3. Cannot use reserved keywords and special symbols except (`_` and `$`)\r\n    * Reserved keywords: `let`, `function`\r\n4. Important reminders:\r\n    * case sensitive: 'a' vs 'A'\r\n    * 'apples' vs 'APPLES' are two different variable (any combination therefore)\r\n    * 'Apples' vs 'apples' vs 'APPLES' vs 'aPPles'\r\n5. How to write long variable names:\r\n    * Long variables names: `balanceafterdeductingloaninterest`\r\n    * Snake Case: `balance_after_deducting_loan_interest`\r\n    * Camel Case: `balanceAfterDeductingLoanInterest`\r\n    * Pascal Case: `BalanceAfterDeductingLoanInterest`\r\n6. Very important for naming functions!\r\n   ` console.log = 3;`\r\n   \r\n\r\n"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "typescript",
+            "source": [
+                "function sumOfTwo(x, y) {\r\n    return x + y;\r\n}\r\n\r\nfunction foo() {\r\n    let x = 55;\r\n}\r\n\r\n// so if a variable is defined outside of any curly braces,\r\n// they are in the GLOBAL scope\r\nlet x = 10;\r\nlet y = 50;\r\nconsole.log(sumOfTwo(4,6));\r\nfoo();\r\nconsole.log(x);"
+            ],
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.stdout",
+                            "value": [
+                                "10",
+                                "",
+                                ""
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "language": "typescript",
+            "source": [
+                "// Nested scope\r\n{\r\n    {\r\n        {\r\n            let x = 3;\r\n            {\r\n                // JavaScript, if it cannot find the variable in the current scope,\r\n                // will look for it in the scope above\r\n                console.log(x);\r\n            }\r\n        }\r\n    }\r\n}"
+            ],
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.stdout",
+                            "value": [
+                                "",
+                                ""
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "language": "typescript",
+            "source": [
+                "const score = 500;\r\nconst subject = \"English\";\r\nlet reward = \"\";\r\n// if the user scores more than 500 for English, then the reward is \"Apple Pie\"\r\n// if the user score more than 1000 for English, then the reward is \"fries\"\r\nif (score >= 500) {\r\n    if (subject == \"English\") {\r\n        reward = \"Appe Pie\";\r\n        console.log(reward);\r\n    }\r\n}\r\nconsole.log(reward);"
+            ],
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.stdout",
+                            "value": [
+                                "Appe Pie",
+                                "Appe Pie",
+                                "",
+                                ""
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "language": "markdown",
+            "source": [
+                "The wrong method:\r\n```\r\nconst score = 500;\r\nconst subject = \"English\";\r\n// if the user scores more than 500 for English, then the reward is \"Apple Pie\"\r\n// if the user score more than 1000 for English, then the reward is \"fries\"\r\nif (score >= 500) {\r\n    if (subject == \"English\") {\r\n        let reward = \"Appe Pie\";\r\n        console.log(reward);\r\n    }\r\n}\r\nconsole.log(reward);\r\n```\r\nAnother reason to get it wronng:\r\n```\r\nconst score = 500;\r\nconst subject = \"English\";\r\nlet reward = \"\";\r\n// if the user scores more than 500 for English, then the reward is \"Apple Pie\"\r\n// if the user score more than 1000 for English, then the reward is \"fries\"\r\nif (score >= 500) {\r\n    if (subject == \"English\") {\r\n        let reward = \"Apple Pie\";\r\n    }\r\n}\r\nconsole.log(reward);\r\n```"
+            ],
+            "outputs": []
         }
     ]
 }
