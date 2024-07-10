@@ -1,0 +1,105 @@
+{
+    "cells": [
+        {
+            "language": "markdown",
+            "source": [
+                "# Keywords vs. functions\r\nKeywords are instruction to the programming language but usually they do very basic tasks\r\n* `let` : assign a value to a variable\r\n* `if` : starts of a conditional statement\r\n\r\n# Functions\r\nExample of functions:\r\n* `console.log`\r\n* `prompt` (not a library function)\r\n* `Math.min` and `Math.max`\r\n\r\n3 components of functions\r\n1. the name of a function (for now)\r\n2. parameters: the input into the function \r\n3. return value: the output of the function"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "markdown",
+            "source": [
+                "# How to write your own custom functions\r\nFunctions are generalized block of code"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "typescript",
+            "source": [
+                "// the block of code below can only add 3 to 4\r\nlet a = 3;\r\nlet b = 4;\r\nconsole.log(a+b);"
+            ],
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.stdout",
+                            "value": [
+                                "7",
+                                "",
+                                ""
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "language": "typescript",
+            "source": [
+                "function addTwo(x, y) {\r\n    // whatever code is in the curly braces belongs to the function\r\n    let total = x + y;\r\n\r\n    return total;\r\n\r\n} // anything in the curly braces belong to the function\r\n\r\nconsole.log(addTwo(5, 3))\r\n"
+            ],
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.stdout",
+                            "value": [
+                                "8",
+                                "",
+                                ""
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "language": "typescript",
+            "source": [
+                "// You can have functions with no paremeters and no return\r\nfunction singMerryChrismtas() {\r\n    console.log(\"We wish you a merry christmas\");\r\n}\r\n\r\nsingMerryChristmas();\r\nsingMerryChristmas();\r\nsingMerryChristmas();"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "typescript",
+            "source": [
+                "// you can have functions that takes parameters and have no return\r\nfunction allCaps(sentence) {\r\n    // call the `toUpperCase` function on the string inside the `sentence` variable\r\n    console.log(sentence.toUpperCase())\r\n}\r\n\r\nallCaps(\"hello world\");"
+            ],
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.stdout",
+                            "value": [
+                                "HELLO WORLD",
+                                "",
+                                ""
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "language": "typescript",
+            "source": [
+                "\r\n\r\n// functions that recieve both parameters and have return\r\n// - gstRate must be an a float which is percentage in GST\r\n// - price must be float\r\nfunction calculateGST(gstRate, price) {\r\n    // gstRate as demical --> 0.09\r\n    // gstRate as an integer --> 9  (for the calcualtion 9/100 * price)\r\n    // gstRate as \"nine percent\" --> can't be done\r\n    let gst = gstRate * price;\r\n    return gst;\r\n}\r\n\r\nfunction getNetPrice(gstRate, price) {\r\n    let gst = calculateGST(gstRate, price);\r\n    let toPay = price + gst;\r\n    return toPay;\r\n}\r\n\r\n// speed should be km/h\r\n// time is h\r\n// return distance in km\r\nfunction calculateDistance(speed, time) {\r\n    return speed * time;\r\n}\r\n\r\nconsole.log(getNetPrice(0.09, 100));\r\n"
+            ],
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.stdout",
+                            "value": [
+                                "109",
+                                "",
+                                ""
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
