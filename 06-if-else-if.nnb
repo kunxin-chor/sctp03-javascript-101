@@ -1,0 +1,39 @@
+{
+    "cells": [
+        {
+            "language": "markdown",
+            "source": [
+                "# if/else if\r\nA chain of conditions that only execute if the preceeding condition is false"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "typescript",
+            "source": [
+                "// if you score above 90, it's AD \r\n// if you score between 80 and 89, it's an A\r\n// if you score between 70 to 79, it's a B\r\n// anything else is F because the school is lazy\r\nconst score = 77;\r\n\r\n// if using if and else\r\nif (score >= 90) {\r\n    console.log(\"distinction\");\r\n} \r\n// between 80 and 89 into comparsion operator and logcial operator\r\nif (score >= 80 && score <= 89 ) {\r\n    console.log(\"A\")\r\n} \r\n\r\nif (score >= 70 && score <= 79) {\r\n    console.log(\"B\")\r\n} \r\n\r\nif (score < 70) {\r\n    console.log(\"F\");\r\n}\r\n\r\n"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "typescript",
+            "source": [
+                "// using if...else if\r\n// you must order the cases in descending order or ascending ordere\r\nconst score = 85;\r\nif (score >= 90) {\r\n    console.log(\"distinction\");\r\n} else if (score >= 80) {\r\n    console.log(\"B\");\r\n} else if (score >= 70) {\r\n    console.log(\"A\");\r\n} else {\r\n    console.log(\"Fail\");\r\n}"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "typescript",
+            "source": [
+                "const score = 85;  //do if/elseif in ascending order\r\nif (score < 70) {\r\n    console.log(\"Fail\")\r\n} else if (score < 80) {\r\n    console.log(\"B\");\r\n} else if (score < 90) {\r\n    console.log(\"A\");\r\n} else {\r\n    console.log(\"AD\");\r\n}"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "markdown",
+            "source": [
+                "In other cases if you using if/else..if always test for the most generic case before the more specific case"
+            ],
+            "outputs": []
+        }
+    ]
+}

@@ -1,0 +1,175 @@
+{
+    "cells": [
+        {
+            "language": "markdown",
+            "source": [
+                "# Array\r\n* essentially a value that can store many values\r\n* one of \"non-primitive\" data types (aka a *reference* data type)\r\n\r\n## Problem:\r\nWe need to store 20 names. \r\n* Strings can store 20 names but not very helpful\r\n* We want be able to extract one or many names at a time\r\n* We want to be able to modify one of the name of the students in class\r\n* We want to remvoe a student from a class"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "typescript",
+            "source": [
+                "// how to store 20 names (one approach):\r\nlet student1, student2, student3, student4;\r\nstudent1 = \"Tan Ah Kow\";\r\nstudent2 = \"John Wick\";\r\nstudent3 = \"Tony Stark\";\r\n// ... one by one assign all 20 studentss"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "typescript",
+            "source": [
+                "// An array can store many values in one variable name\r\nlet names = [\"John Wick\", \"Tony Stark\", \"Tan Ah Kow\", \"James Bond\"];  // square bracket means array (similiar to Python list);\r\n// each value in the array is seperated by a comma\r\n// if we want a specific value in the array, we use the following syntax (array accessor):\r\n// names[<index number of the value that we want>]  \r\n// programmers like to count from 0\r\nconsole.log(names[0]);\r\n"
+            ],
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.stdout",
+                            "value": [
+                                "John Wick",
+                                "",
+                                ""
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "language": "typescript",
+            "source": [
+                "console.log(names[2]);"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "markdown",
+            "source": [
+                "# Arrays can store different values"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "typescript",
+            "source": [
+                "let rojak = [ 42, 3.14, \"Roti prata\", true, [1,2,3] ] \r\n\r\n//console.log(rojak[4][1]);\r\n// => rojak[4][1]\r\n// =>  [1,2,3][1]\r\n// => 2\r\n\r\nrojak.push(\"Happy new year\");\r\nconsole.log(rojak);"
+            ],
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.stdout",
+                            "value": [
+                                "[ 42, 3.14, 'Roti prata', true, [ 1, 2, 3 ], 'Happy new year' ]",
+                                "",
+                                ""
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "language": "markdown",
+            "source": [
+                "# Working with arrays\r\n1. Add new student\r\n2. Remove an existing student\r\n3. Change a student\r\n4. Show all the students there are\r\n"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "typescript",
+            "source": [
+                "// we use push to add to the back of an array\r\nlet classroom = []; // let classroom = Array();\r\n// add to the back of an array\r\nclassroom.push(\"John Wick\");  // `classroom.push` <-- use the push function belonging to the array\r\nclassroom.push(\"Tony Stark\");\r\nclassroom.push(\"Peter Parker\");\r\nclassroom.push(\"Bruce Wayne\");\r\nconsole.log(classroom);"
+            ],
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.stdout",
+                            "value": [
+                                "[ 'John Wick', 'Tony Stark', 'Peter Parker', 'Bruce Wayne' ]",
+                                "",
+                                ""
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "language": "typescript",
+            "source": [
+                "// when you the array accessor, you are specifying one specific element in an array\r\nclassroom[2] = \"Spiderman\"\r\nconsole.log(classroom);\r\n"
+            ],
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.stdout",
+                            "value": [
+                                "[ 'John Wick', 'Tony Stark', 'Spiderman', 'Bruce Wayne' ]",
+                                "",
+                                ""
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "language": "typescript",
+            "source": [
+                "// Arrays have functions as well\r\n// the function to remove an elment from an array is splice\r\n// array.splice( <starting index to start deleting from>, <how many to delete> )\r\n// we can use array.splice to delete or to replace\r\nclassroom.splice(1, 1);\r\nconsole.log(classroom)\r\n"
+            ],
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.stdout",
+                            "value": [
+                                "[ 'John Wick', 'Spiderman', 'Bruce Wayne' ]",
+                                "",
+                                ""
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "language": "typescript",
+            "source": [
+                "// there's a way to know how many elements there are in an array\r\nclassroom.length;"
+            ],
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.stdout",
+                            "value": [
+                                "",
+                                ""
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "items": [
+                        {
+                            "mime": "text/plain",
+                            "value": [
+                                "\u001b[33m3\u001b[39m"
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "language": "typescript",
+            "source": [
+                "classroom.splice(classroom.length - 1);"
+            ],
+            "outputs": []
+        }
+    ]
+}
