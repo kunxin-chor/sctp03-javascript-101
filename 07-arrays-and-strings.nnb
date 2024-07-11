@@ -167,7 +167,27 @@
         {
             "language": "typescript",
             "source": [
-                "classroom.splice(classroom.length - 1);"
+                "// remove the last element in the arrya, we use classroom.length - 1 to get the last index\r\nclassroom.splice(classroom.length - 1);\r\nconsole.log(classroom);"
+            ],
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.stdout",
+                            "value": [
+                                "[ 'John Wick', 'Spiderman' ]",
+                                "",
+                                ""
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "language": "typescript",
+            "source": [
+                "let magicSquare = [\r\n    [1,2,3],\r\n    [4,5,6],\r\n    [7,8,9]\r\n]"
             ],
             "outputs": []
         }
