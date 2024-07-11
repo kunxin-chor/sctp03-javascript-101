@@ -1,0 +1,295 @@
+{
+    "cells": [
+        {
+            "language": "markdown",
+            "source": [
+                "# Operators known so far:\r\n* Arithmetic : `**, * / %,  + -`\r\n* Comparison : `> < >= <= != !== == ===`\r\n* Assignment Operator: `=`\r\n\r\n"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "markdown",
+            "source": [
+                "# Comparison Operators\r\n* Their result is a boolean value, `true` or `false`\r\n* `<` : lesser than\r\n* `>` : greater than\r\n* `<=` : lesser equal\r\n* `>=` : greater equal\r\n* `==` : equal\r\n* `===` : tripe equal (compare type and data at the same time)\r\n* `!=` : not equal\r\n* `!==` : triple not equal"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "typescript",
+            "source": [
+                "\r\n3 < 4\r\n"
+            ],
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.stdout",
+                            "value": [
+                                "",
+                                ""
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "items": [
+                        {
+                            "mime": "text/plain",
+                            "value": [
+                                "\u001b[33mtrue\u001b[39m"
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "language": "typescript",
+            "source": [
+                "// the left hand side and right side must be a value before comparison can take place\r\nlet a = 4;\r\nlet b = 5;\r\na >= b;\r\n// => 4 >= 5"
+            ],
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.stdout",
+                            "value": [
+                                "",
+                                ""
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "items": [
+                        {
+                            "mime": "text/plain",
+                            "value": [
+                                "\u001b[33mfalse\u001b[39m"
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "language": "typescript",
+            "source": [
+                "// comparison takes place after arthimetic\r\n4 + 8 > 12 - 1"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "markdown",
+            "source": [
+                "# Why do we need `==` and `===` ??\r\n* When we add a string and a number together: `2 + \"2\"`\r\n  * Will convert the integer to a  string and then it will be string `22`\r\n* What if we compare an integer and a string\r\n  * `2 == \"2\"`\r\n"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "typescript",
+            "source": [
+                "// if we use double equal and one of the side of the same data type\r\n/// JavaScript will do conversion\r\n2 == \"2\"  // when face with a comparison of two unequal type, JavaScript\r\n          // will convert one of them to be the same\r\n// => \"2\" == \"2\"\r\n// => true"
+            ],
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.stdout",
+                            "value": [
+                                "",
+                                ""
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "items": [
+                        {
+                            "mime": "text/plain",
+                            "value": [
+                                "\u001b[33mtrue\u001b[39m"
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "language": "typescript",
+            "source": [
+                "2 === \"2\"  // triple equal will only result in true if both sides\r\n           // are the same data and the same data type"
+            ],
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.stdout",
+                            "value": [
+                                "",
+                                ""
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "items": [
+                        {
+                            "mime": "text/plain",
+                            "value": [
+                                "\u001b[33mfalse\u001b[39m"
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "language": "typescript",
+            "source": [
+                "true == 1;  // because when you compare a boolean to a number, true is convverted to 1"
+            ],
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.stdout",
+                            "value": [
+                                "",
+                                ""
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "items": [
+                        {
+                            "mime": "text/plain",
+                            "value": [
+                                "\u001b[33mtrue\u001b[39m"
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "language": "typescript",
+            "source": [
+                "true === 1;"
+            ],
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.stdout",
+                            "value": [
+                                "",
+                                ""
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "items": [
+                        {
+                            "mime": "text/plain",
+                            "value": [
+                                "\u001b[33mfalse\u001b[39m"
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "language": "typescript",
+            "source": [
+                "false == 0"
+            ],
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.stdout",
+                            "value": [
+                                "",
+                                ""
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "items": [
+                        {
+                            "mime": "text/plain",
+                            "value": [
+                                "\u001b[33mtrue\u001b[39m"
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "language": "markdown",
+            "source": [
+                "# Logical operators\r\n* and: `&&`\r\n* or: `||`"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "typescript",
+            "source": [
+                "let passedEnglish = true;\r\nlet passedScience = true;\r\nlet goingToDisneyLand = passedEnglish && passedScience;\r\n\r\nlet married = false;\r\nlet single = true;\r\nlet above35 = true;\r\nlet canBuyHDB = married || single && above35;"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "typescript",
+            "source": [
+                "console.log(\"true && true =>\", true && true);\r\nconsole.log(\"true && false =>\", true && false);\r\nconsole.log(\"false && true =>\", false && true);\r\nconsole.log(\"false && false =>\", false && false);"
+            ],
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.stdout",
+                            "value": [
+                                "true && true => true",
+                                "true && false => false",
+                                "false && true => false",
+                                "false && false => false",
+                                "",
+                                ""
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "language": "typescript",
+            "source": [
+                "console.log(\"true || true =>\", true || true);\r\nconsole.log(\"true || false =>\", true || false);\r\nconsole.log(\"false || true =>\", false ||true);\r\nconsole.log(\"false || false =>\", false || false);"
+            ],
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.stdout",
+                            "value": [
+                                "true || true => true",
+                                "true || false => true",
+                                "false || true => true",
+                                "false || false => false",
+                                "",
+                                ""
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
