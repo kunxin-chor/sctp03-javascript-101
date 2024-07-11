@@ -1,0 +1,106 @@
+{
+    "cells": [
+        {
+            "language": "markdown",
+            "source": [
+                "# Branching\r\n* Executing some lines of the code while ignoring others"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "typescript",
+            "source": [
+                "// test if a number is positive or negative\r\n// and we tell the user whether it is positive or negative\r\nlet num = -14;\r\n\r\n// if (<boolean expression>) {\r\n//   <lines of code to run\r\n// }\r\n// \r\n// \"branching\" - if the condition in the if is not met, then the lines\r\n// belonging to it won't run\r\nif (num >= 0) {\r\n    console.log(\"The number is positive\")\r\n}\r\n\r\nconsole.log(\"End of program\")"
+            ],
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.stdout",
+                            "value": [
+                                "End of program",
+                                "",
+                                ""
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "language": "typescript",
+            "source": [
+                "// In Singapore, the age for drinking is 18\r\n// the age for smoking is also 21\r\n// the age for voting is also 21\r\n// the age is to go NS is 16\r\n// if the age is less than 4, you can go to cinema for free\r\n\r\nlet age = 19;\r\nif (age >= 16) {\r\n    console.log(\"Eligible to go for NS\");\r\n\r\n}\r\n\r\nif (age <= 4) {\r\n    console.log(\"You can enter cinema for free\")\r\n}\r\n\r\n"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "typescript",
+            "source": [
+                "// positive or negative number\r\n// we want to check if a number is positive or negative\r\n// and tell user which one it is\r\nlet num = 15;\r\nif (num >= 0) {\r\n    console.log(\"positive\");\r\n}\r\n\r\nif (num < 0) {\r\n    console.log(\"negative\");\r\n}\r\n\r\n// for mutually exclusive cases\r\nif (num >= 0 ) {\r\n    console.log(\"still a positive number\")\r\n} else {\r\n    // the else portion of a if only executes\r\n    // if the expression in the if is false\r\n    console.log(\"stil a negative number\")\r\n}"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "typescript",
+            "source": [
+                "// use of conditional operators\r\nlet age = 19;\r\nlet gender = \"female\";\r\n\r\n// gender is male AND same time is greater or equal to 16\r\nif (age >= 16 && gender == \"male\" ) {\r\n  console.log(\"You get to serve NS\")\r\n} else {\r\n    console.log(\"You don't have serve NS\");\r\n}"
+            ],
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.stdout",
+                            "value": [
+                                "You don't have serve NS",
+                                "",
+                                ""
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "language": "typescript",
+            "source": [
+                "// In singapore, you get to buy a HDB\r\n// if you are married or above 35\r\nlet isMarried = false;\r\nlet age = 24;\r\nif (age >= 35 || isMarried == true) {\r\n    console.log(\"Can buy a HDB flat\");\r\n}"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "typescript",
+            "source": [
+                "// In Singapore, you must be a PR or citizen, and at the \r\n// same time be either married or above 35\r\n// to buy HDB flat\r\nlet age = 19;\r\nlet isMarried = false;\r\nlet citizen = true;\r\nlet pr = false;\r\nif ( (citizen || pr) && (isMarried || age >= 35)) {\r\n// => (true || false) && (false || 19 >= 35)\r\n// => (true) && (false || 19 >= 35)\r\n// => (true) && (false || false)\r\n// => (true) && (false)\r\n// => false\r\n  console.log(\"Can buy HDB\")\r\n}\r\n\r\n\r\n// alternative;\r\nif (citizen || pr) {\r\n    if (isMarried || age >= 35) {\r\n        console.log(\"Can buy HDB\");\r\n    } \r\n}\r\n"
+            ],
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.stdout",
+                            "value": [
+                                "Can buy HDB",
+                                "",
+                                ""
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "language": "markdown",
+            "source": [
+                "# Trying to evaluate a code by yourself: \r\n1. Sub in the variables first\r\n2. ( ) has priority\r\n3. function calls ( Math.min, Math.max)\r\n4. arth. operators: `**, / * %, + -`\r\n5. comparison operators: `> < >= <= etc.`\r\n6. conditional operators: `&& ||`"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "markdown",
+            "source": [
+                ""
+            ],
+            "outputs": []
+        }
+    ]
+}
