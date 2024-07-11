@@ -190,6 +190,166 @@
                 "let magicSquare = [\r\n    [1,2,3],\r\n    [4,5,6],\r\n    [7,8,9]\r\n]"
             ],
             "outputs": []
+        },
+        {
+            "language": "markdown",
+            "source": [
+                "# Slice an array\r\n* Slice is different from splice\r\n* Slice will extract a **copy** of an array from one index to another index\r\n* array.slice( `<start index inclusive>`, `<end index exlcusive>` )"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "typescript",
+            "source": [
+                "let fruits = [\"apples\", \"bananas\", \"oranges\", \"pineappes\", \"durains\"];\r\nlet basket = fruits.slice(1, 4);\r\nconsole.log(basket);"
+            ],
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.stdout",
+                            "value": [
+                                "[ 'bananas', 'oranges', 'pineappes' ]",
+                                "",
+                                ""
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "language": "typescript",
+            "source": [
+                "console.log(fruits);"
+            ],
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.stdout",
+                            "value": [
+                                "[ 'apples', 'bananas', 'oranges', 'pineappes', 'durains' ]",
+                                "",
+                                ""
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "language": "typescript",
+            "source": [
+                "// slice from index 2 all the way to the end\r\n// when slice function doesn't have a second parameter, it means slice from the start index all the way past the end of array\r\nconsole.log(fruits.slice(2));"
+            ],
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.stdout",
+                            "value": [
+                                "[ 'oranges', 'pineappes', 'durains' ]",
+                                "",
+                                ""
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "language": "typescript",
+            "source": [
+                "// if you want to slice the last one\r\nconsole.log(fruits.slice( fruits.length-1, fruits.length ));"
+            ],
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.stdout",
+                            "value": [
+                                "[ 'durains' ]",
+                                "",
+                                ""
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "language": "typescript",
+            "source": [
+                "// second method to slice from the end\r\n// you can use negative index\r\n// -1 --> last index\r\n// -2 --> is the second last index\r\n// if we omit the second parameter to slice, it means we want to slice past the end\r\nconsole.log(fruits.slice(-1));"
+            ],
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.stdout",
+                            "value": [
+                                "[ 'durains' ]",
+                                "",
+                                ""
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "language": "markdown",
+            "source": [
+                "# print payslip\r\n\r\n```\r\nName of Employee: JACK MA\r\nAmount: 6000\r\n```"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "javascript",
+            "source": [
+                "// How we extract each item from an array one at a time\r\nlet employees = [\"Jack Ma\", \"Bill Gates\", \"Steve Jobs\", \"Elon Musk\"];\r\n\r\n// reptition - use a `for` loop\r\n// for..of loop: it will extract one element at a time from the array and assign to a variable\r\n// and will only end when the last element in the array is\r\nfor (let name of employees) {\r\n    console.log(\"Name of Employee:\", name);\r\n}\r\n"
+            ],
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.stdout",
+                            "value": [
+                                "Name of Employee: Jack Ma",
+                                "Name of Employee: Bill Gates",
+                                "Name of Employee: Steve Jobs",
+                                "Name of Employee: Elon Musk",
+                                "",
+                                ""
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "language": "javascript",
+            "source": [
+                "for (let i =0; i < employees.length; i++) {\r\n    console.log(employees[i]);\r\n}"
+            ],
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.stdout",
+                            "value": [
+                                "Jack Ma",
+                                "Bill Gates",
+                                "Steve Jobs",
+                                "Elon Musk",
+                                "",
+                                ""
+                            ]
+                        }
+                    ]
+                }
+            ]
         }
     ]
 }
