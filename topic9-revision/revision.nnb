@@ -1,0 +1,93 @@
+{
+    "cells": [
+        {
+            "language": "markdown",
+            "source": [
+                "# JavaScript\r\n* Values\r\n  * Store data\r\n  * 3 primitives and 3 reference data types (what are they?)\r\n* Variables\r\n  * Are to store data\r\n  * The rules for naming variables\r\n  * What are the two ways to create variables\r\n    * We only used `let`\r\n* Operators\r\n  * Four types of operators:\r\n    * Arthimetic\r\n    * Comparison\r\n    * Logical ( `||` will be evaluated after `&&`)\r\n    * Assignment\r\n  * Have to know their order of precedence\r\n* `if/else`\r\n* `for`\r\n* `functions`\r\n   * VERI VERI IMPORTANT\r\n* `objects`\r\n* `arrays`"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "typescript",
+            "source": [
+                "// Objects\r\n// An object basically stores key/value pairs\r\n// - it can store multiple data points\r\n// by design all keys in an object ARE strings\r\nconst book = {\r\n    \"title\":\"The Lord of the Rings\",\r\n    \"pages\": 2000,\r\n    \"author\":\"JRR Tolkien\",\r\n    \"borrowed\": true\r\n}\r\n\r\n\r\n\r\n// we are able to refer to a VALUE in the object via its key\r\nconsole.log(book.pages); // think of . as 's in English (belonging to)\r\n\r\n// we are also able to use [] as in array, but the key will be a string\r\nconsole.log(book[\"pages\"]);\r\n\r\n// the [] is useful is when the key in a variable\r\nlet k = \"pages\";\r\nconsole.log(book[k]);\r\n// => consolelog(book[\"pages\"])"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "typescript",
+            "source": [
+                "const person = {\r\n    name:\"Phua Chua Kang\",\r\n    \"date of birth\":\"2022-12-12\" // if the key is not a valid variable name, then we have to surround with quotes to make it into a string\r\n} // as long as the left hand side of the : is a valid variable name, it will work (auto converted to a string)\r\n\r\nconsole.log(person[\"date of birth\"]);"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "markdown",
+            "source": [
+                "Objects contain\r\n* data\r\n* functions"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "typescript",
+            "source": [
+                "// use the `log` function that inside the console object\r\nconsole.log(\"Hello World\");"
+            ],
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.stdout",
+                            "value": [
+                                "Hello World",
+                                "",
+                                ""
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "language": "typescript",
+            "source": [
+                "console.log(Math.max(1, 3)); // the max function inside the Math object (or sometthing like that)"
+            ],
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.stdout",
+                            "value": [
+                                "3",
+                                "",
+                                ""
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "language": "markdown",
+            "source": [
+                "Some examples of objects that we have come across so far:\r\n* strings (`\"123\".slice(1,2)`, `\"abc\".toUpperCase()` )\r\n* arrays (`[1,2,3].slice(1,5)`, `[].push(456)`)"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "typescript",
+            "source": [
+                "let car = {\r\n    \"speed\": 120,\r\n    \"calculateDistanceTravelled\": function(hourTravelled){\r\n        // the `this` here is contextual\r\n        // it refers to the object that calls the function\r\n       return this.speed * hourTravelled;\r\n    }\r\n}\r\n\r\nlet toalDistance = car.calculateDistanceTravelled(100)"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "markdown",
+            "source": [
+                "# Objects in JavaScript vs. Other Languages\r\n* JavaScript is the only language that create objects directly using the object literal syntax (at least comparded C++, Java, Python, C# etc.)\r\n* You don't need a class to create an object in JavaScript (because there's NO OOP in JavaScript)\r\n* But there is a `class` keyword in JavaScript"
+            ],
+            "outputs": []
+        }
+    ]
+}
