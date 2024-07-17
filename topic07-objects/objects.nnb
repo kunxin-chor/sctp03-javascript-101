@@ -1,0 +1,226 @@
+{
+    "cells": [
+        {
+            "language": "typescript",
+            "source": [
+                "let person = {\r\n    name:\"Phua Chua Kang\",\r\n    age:\"47\"\r\n};  // the {} defines an object; it's not a scope\r\n\r\n// The variable `person` contains an object"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "markdown",
+            "source": [
+                "# The different data types so far\r\n* Primitive Data Types\r\n    * Numbers (integers, floating points numbers aka floats)\r\n    * Strings\r\n    * Boolean (`true`, `false`)\r\n* Reference Data Types\r\n    * Arrays\r\n    * Objects (new!)\r\n    * Functions (covered later)\r\n"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "markdown",
+            "source": [
+                "# Why Use Objects?\r\n* Objects similiar to array -> store multiple values in a value\r\n* Objects can be used as:\r\n  1. an assocation map\r\n  2. to store structured data (a record with multiple fields)"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "typescript",
+            "source": [
+                "// {\r\n//   <key>:<value>\r\n//\r\n//}\r\n\r\nlet person = {\r\n    name: \"Phua Chua Kang\",\r\n    age: 47\r\n}\r\n\r\nconsole.log(person.name)\r\n"
+            ],
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.stdout",
+                            "value": [
+                                "Phua Chua Kang",
+                                "",
+                                ""
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "language": "typescript",
+            "source": [
+                "console.log(person.age)"
+            ],
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.stdout",
+                            "value": [
+                                "47",
+                                "",
+                                ""
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "language": "typescript",
+            "source": [
+                "// use array as an association mapping\r\n// know how many days per month\r\nlet months = {\r\n    \"jan\": 31,\r\n    \"feb\": 28,\r\n    \"mar\": 31,\r\n    \"apr\": 30,\r\n}\r\nlet month = \"apr\";\r\nconsole.log(months[month]); // we use square bracket to access a key in an object if the key is in a variable\r\n\r\n"
+            ],
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.stdout",
+                            "value": [
+                                "30",
+                                "",
+                                ""
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "language": "markdown",
+            "source": [
+                "# Defining an object\r\n```\r\n{  // <-- start of object (NOT A SCOPE)\r\n\r\n  <key> (always a string): <value>   <-- any date\r\n\r\n} // <--- end of object\r\n```"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "typescript",
+            "source": [
+                "// Object within an object\r\nlet recipe= {\r\n    \"title\":\"Chicken Rice\",\r\n    \"ingredients\": [\"Chicken\", \"Rice\"],\r\n    \"nutrients\": {\r\n        \"calories\": 1200,\r\n        \"fat\": 35,\r\n        \"carbonhyrdate\": 100\r\n    }\r\n\r\n}\r\nconsole.log(recipe);"
+            ],
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.stdout",
+                            "value": [
+                                "{",
+                                "  title: 'Chicken Rice',",
+                                "  ingredients: [ 'Chicken', 'Rice' ],",
+                                "  nutrients: { calories: 1200, fat: 35, carbonhyrdate: 100 }",
+                                "}",
+                                "",
+                                ""
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "language": "typescript",
+            "source": [
+                "console.log(recipe.nutrients);"
+            ],
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.stdout",
+                            "value": [
+                                "{ calories: 1200, fat: 35, carbonhyrdate: 100 }",
+                                "",
+                                ""
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "language": "typescript",
+            "source": [
+                "console.log(recipe.nutrients.fat)\r\n"
+            ],
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.stdout",
+                            "value": [
+                                "35",
+                                "",
+                                ""
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "language": "typescript",
+            "source": [
+                "// add a new key to an existing object\r\nrecipe.servesHowMany = 4;\r\nconsole.log(recipe);"
+            ],
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.stdout",
+                            "value": [
+                                "{",
+                                "  title: 'Chicken Rice',",
+                                "  ingredients: [ 'Chicken', 'Rice' ],",
+                                "  nutrients: { calories: 1200, fat: 35, carbonhyrdate: 100 },",
+                                "  servesHowMany: 4",
+                                "}",
+                                "",
+                                ""
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "language": "typescript",
+            "source": [
+                "// delete a key in an existing object\r\n// remove the servesHowMany key\r\ndelete recipe.servesHowMany;\r\nconsole.log(recipe);"
+            ],
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.stdout",
+                            "value": [
+                                "{",
+                                "  title: 'Chicken Rice',",
+                                "  ingredients: [ 'Chicken', 'Rice' ],",
+                                "  nutrients: { calories: 1200, fat: 35, carbonhyrdate: 100 }",
+                                "}",
+                                "",
+                                ""
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "language": "markdown",
+            "source": [
+                "# Combing arrays with objects to create a simple database\r\n* Each element in an array represents one record\r\n* Each record is represented by an object\r\n"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "typescript",
+            "source": [
+                "let customerDatabase = [\r\n    {\r\n        id: 1,\r\n        name:\"Phua Chua Kang\",\r\n        age: 47\r\n    },\r\n    {\r\n        id: 2,\r\n        name:\"Jon Snow\",\r\n        age: 35\r\n    },\r\n    {\r\n        id: 3,\r\n        name:\"John Wick\",\r\n        age: 47\r\n    }\r\n]"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "markdown",
+            "source": [
+                "# XML is descend from Sigma Script (here's an example)\r\n<CustomeDatabase>\r\n    <Customer id=\"1\">\r\n        <Name>Phua Chua Kang</Name>\r\n        <Age>47</Age>\r\n    </Customer>\r\n</CustomerDatabase>"
+            ],
+            "outputs": []
+        }
+    ]
+}

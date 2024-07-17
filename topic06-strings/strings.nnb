@@ -1,0 +1,196 @@
+{
+    "cells": [
+        {
+            "language": "markdown",
+            "source": [
+                "# Strings\r\n* One of the primitive data type\r\n* Purpose: store human readable data"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "typescript",
+            "source": [
+                "// it is possible to have JavaScript expressions in a backtick string\r\n// AS LONG AS THEY EVALUATED TO A VALUE\r\nlet amountDue = 200;\r\nlet passage = `Dear sir,\r\n\r\n   Your monthly amount of $${amountDue} is due. Please make sure to pay by the end of\r\n   month or face an adminstraive fee of 10% (which will be $${amountDue * 0.1})\r\n\r\n   Regards,\r\n     Paul\r\n\r\n   \"Serving Customers with Utmost Sincerity since 1899\"\r\n\r\n`;\r\nconsole.log(passage);"
+            ],
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.stdout",
+                            "value": [
+                                "Dear sir,",
+                                "",
+                                "   Your monthly amount of $200 is due. Please make sure to pay by the end of",
+                                "   month or face an adminstraive fee of 10% (which will be $20)",
+                                "",
+                                "   Regards,",
+                                "     Paul",
+                                "",
+                                "   \"Serving Customers with Utmost Sincerity since 1899\"",
+                                "",
+                                "",
+                                "",
+                                ""
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "language": "typescript",
+            "source": [
+                "// Negative example, won't work\r\n// Why? Because the expression will not evaluate to value\r\nlet bmi = 17.1\r\nlet a = `${if (bmi >= 18.5){\r\n    // won't work because a if block doesn't evaluate to a value\r\n    // don't try to put into a retrurn to cause it to have a value\r\n}}`;"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "typescript",
+            "source": [
+                "// a function can return a value\r\n// if the function is called, it will evaluate to be the value that is returned\r\n// eg:\r\n//  getWeightStatus(25);\r\n//  => \"Overweight\"\r\nfunction getWeightStatus(bmi) {\r\n    if (bmi < 18.5) {\r\n        return \"Underweight\";\r\n    } else if (bmi < 24.9) {\r\n        return \"Healthy\"\r\n    } else if (bmi < 29.9) {\r\n        return \"Overweight\"\r\n    } else {\r\n        return \"Obese\"\r\n    }\r\n}\r\n\r\nconsole.log(`If your BMI is 25, then you are ${getWeightStatus(25)}`);\r\n"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "markdown",
+            "source": [
+                "# Strings are like arrays\r\n* Access indivdual character (one symbol in a String) of a string by `[ ]`"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "typescript",
+            "source": [
+                "let fruits = \"durian\";\r\nconsole.log(fruits[3])"
+            ],
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.stdout",
+                            "value": [
+                                "i",
+                                "",
+                                ""
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "language": "markdown",
+            "source": [
+                "# String operations\r\n* slice a string\r\n* convert it to upper case\r\n* convert it to lower case"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "typescript",
+            "source": [
+                "let favoriteAnimal = \"Ponies\";\r\nconsole.log(favoriteAnimal.slice(1,4))"
+            ],
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.stdout",
+                            "value": [
+                                "oni",
+                                "",
+                                ""
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "language": "typescript",
+            "source": [
+                "// toUpperCase(): create a copy of the string and convert the copy to uppercase\r\nconsole.log(favoriteAnimal.toUpperCase());"
+            ],
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.stdout",
+                            "value": [
+                                "PONIES",
+                                "",
+                                ""
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "language": "typescript",
+            "source": [
+                "// includes: check if a string includes another smaller string\r\nconsole.log(\"JavaScript\".includes(\"Java\"));"
+            ],
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.stdout",
+                            "value": [
+                                "true",
+                                "",
+                                ""
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "language": "typescript",
+            "source": [
+                "let saying = \"Jack and Jill went up the hill\";\r\nconsole.log(saying.includes(\"Jill\"));"
+            ],
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.stdout",
+                            "value": [
+                                "true",
+                                "",
+                                ""
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "language": "typescript",
+            "source": [
+                "console.log(saying.includes('jill'));  // Case sensitive!"
+            ],
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.stdout",
+                            "value": [
+                                "false",
+                                "",
+                                ""
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "language": "markdown",
+            "source": [
+                "* Every file has a file extension.\r\n* Write a program that asks the user to enter a file name\r\n* If the extension of the file name is `img` or `png` then print out that\r\nit is an image file.\r\n* Advanced: how to make this case insensitive (IMG, Img, imG still counts as an image)"
+            ],
+            "outputs": []
+        }
+    ]
+}
